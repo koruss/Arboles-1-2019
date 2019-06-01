@@ -26,7 +26,7 @@ public:
 private:
    BSTNode<E> *insertAux(BSTNode<E> *pRoot, E element){
        if(pRoot==NULL){
-           return BSTNode<E>(element);
+           return new BSTNode<E>(element);
        }
 
        if(element<pRoot->getElement()){
@@ -109,19 +109,30 @@ private:
    }
 
 public:
-   List<E> *getElements(){
-       List<E> *elements= new DlinkedList<E>();
-       getElementsAux(root,elements);
-       return elements;
+//   List<E> *getElements(){
+//       List<E> *elements= new DlinkedList<E>();
+//       getElementsAux(root,elements);
+//       return elements;
+//   }
+
+//   void getElementsAux(BSTNode<E> pRoot,List<E> elements){
+//       if(pRoot==NULL){return}
+//       getElementsAux(pRoot.left,elements)
+//       elements.append(pRoot.getElement());
+//       getElementsAux(pRoot.right,elements);
+
+//   }
+
+
+   void print(){
+       printAux(root);
    }
+   void printAux(BSTNode<E> *pRoot){
+       if(pRoot==NULL){return;}
+       printAux(pRoot->getLeft());
+       cout<<pRoot->getElement();
+       printAux(pRoot->getRight());
 
-   void getElementsAux(BSTNode<E> pRoot,
-
-                       List<E> elements){
-       if(root==NULL){return}
-       getElementsAux(pRoot.left,elements)
-       elements.append(pRoot.getElement());
-       getElementsAux(pRoot.right,elements);
 
    }
 

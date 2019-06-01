@@ -11,4 +11,5 @@ HEADERS += \
     arbolbinario.h \
     binnode.h \
     trienode.h \
-    trie.h
+    trie.h \
+    avltree.h

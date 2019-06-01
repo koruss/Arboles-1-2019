@@ -1,13 +1,13 @@
 #ifndef TRIENODE_H
 #define TRIENODE_H
-#include "list"
+//#include "list.h"
 
 class TrieNode{
 private:
     bool isFinal;
     int prefixCount;
 
-    BSTreeDictionary<char,TrieNode*> children;
+//    BSTreeDictionary<char,TrieNode*> children;
 
 
 public:

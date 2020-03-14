@@ -89,7 +89,9 @@ public:
             }
         }
 
-
+    void printer(){
+        cout<<"HOLA";
+    }
 
 };
 #endif // BINNODE_H
